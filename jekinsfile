@@ -1,0 +1,8 @@
+node('master') {
+   stage('CD -S1') 
+   {
+   git 'https://github.com/zareen-neha/war-file.git'  
+   }
+    stage('CD -S2') {
+    sh 'mvn package'
+    }
